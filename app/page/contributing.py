@@ -10,11 +10,9 @@ from dash.dependencies import Input, Output
 column1 = dbc.Col(
     [
         dcc.Markdown("""
-
-            ## Predictions
-
-            Your instructions: How to use your app to get new predictions.
-
+            To Contribute to the project please visit the github page to see what issues are open,
+            if there are none then take a look at the roadmap and open an issue for it,
+            TravisCI should take care of the rest as far as rebuilding and deploying once the feature is peer reviewed
             """),
     ],
     md=4,

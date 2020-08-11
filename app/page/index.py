@@ -27,6 +27,8 @@ column1 = dbc.Col(
     md=4,
 )
 
+# this section is just a placeholder for now
+# going to work on the modeling and ETL pipe later
 gapminder = px.data.gapminder()
 fig = px.scatter(
     gapminder.query("year==2007"),

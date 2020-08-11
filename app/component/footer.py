@@ -10,7 +10,6 @@ className='lead' : https://getbootstrap.com/docs/4.3/content/typography/#lead
 import dash_html_components as html
 import dash_bootstrap_components as dbc
 
-
 content = dbc.Container(
     dbc.Row(
         dbc.Col(
@@ -35,7 +34,4 @@ content = dbc.Container(
                     ),
                 ],
                 className="lead",
-            )
-        )
-    )
-)
+            ))))
