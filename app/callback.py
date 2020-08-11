@@ -8,7 +8,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
-from app.page import index, predictions, insights, process
+from app.page import index, predictions, insights, process, contributing
 
 
 def register_callbacks(app):
@@ -18,8 +18,8 @@ def register_callbacks(app):
     URL Routing for Multi-Page Apps: https://dash.plot.ly/urls
 
     """
-
-    @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
+    @app.callback(Output("page-content", "children"),
+                  [Input("url", "pathname")])
     def display_page(pathname):
         """
         To add a page to the list of registered callbacks add the page
@@ -34,6 +34,8 @@ def register_callbacks(app):
             return index.layout
         elif pathname == "/predictions":
             return predictions.layout
+        elif pathname == "/contributing":
+            return contributing.layout
         elif pathname == "/insights":
             return insights.layout
         elif pathname == "/process":

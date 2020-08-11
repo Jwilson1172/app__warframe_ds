@@ -9,29 +9,20 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 
-
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
     [
-        dcc.Markdown(
-            """
-        
-            ## Your Value Proposition
-
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
-
-            ✅ app__warframe_ds is a running app that adapts to your fitness levels and designs personalized workouts to help you 
-            improve your running. 
-
-            ❌ app__warframe_ds is the only intelligent running app that uses sophisticated deep neural net machine learning to 
-            make your run smarter because we believe in ML driven workouts. 
-
-            """
-        ),
-        dcc.Link(
-            dbc.Button("Your Call To Action", color="primary"), href="/predictions"
-        ),
+        dcc.Markdown("""
+            # Warframe Market Predictions
+            using this app you can see various predictions to the PC-Player Market values on WarFrame
+            Sorry that is is only in PC if you would like to contribute please visit the
+            contribution page to see what you can help with.
+            """),
+        dcc.Link(dbc.Button("Your Call To Action", color="primary"),
+                 href="/predictions"),
+        dcc.Link(dbc.Button("Contributing to the Project", color="primary"),
+                 href="/contributing")
     ],
     md=4,
 )
@@ -48,6 +39,8 @@ fig = px.scatter(
     size_max=60,
 )
 
-column2 = dbc.Col([dcc.Graph(figure=fig),])
+column2 = dbc.Col([
+    dcc.Graph(figure=fig),
+])
 
 layout = dbc.Row([column1, column2])
