@@ -1,0 +1,8 @@
+{
+   "name": "app__warframe_ds",
+   "buildpacks": [
+      {
+         "url": "heroku/python"
+      }
+   ]
+}
