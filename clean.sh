@@ -1,4 +1,2 @@
-# setting instant fail
-set -e
-
-if [-d ./*/__pycache__]
+rm -rf ./*/__pycache__
+rm -rf ./*/.pytest_cache
