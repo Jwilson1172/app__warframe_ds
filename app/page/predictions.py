@@ -12,13 +12,16 @@ column1 = dbc.Col(
     [
         dcc.Markdown(
             """
-        
+
             ## Predictions
+            In order to see the predictions for a particular item use the search bar to find and item
+            that is in the database, after finding the item in the resulting dropdown you will be redirected to that items page
+            from there there will be  agraph with the predictions and a link to download the prediction data in CSV format
 
-            Your instructions: How to use your app to get new predictions.
-
+            # The Global Index Valuation (GIV)
             """
         ),
+
     ],
     md=4,
 )

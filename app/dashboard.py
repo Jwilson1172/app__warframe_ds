@@ -22,7 +22,10 @@ def register_dashboard(server):
         "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
     ]
 
-    meta_tags = [{"name": "viewport", "content": "width=device-width, initial-scale=1"}]
+    meta_tags = [{
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1"
+    }]
 
     dashboard = dash.Dash(
         __name__,
@@ -33,18 +36,16 @@ def register_dashboard(server):
         server=server,
     )
 
-    dashboard.layout = html.Div(
-        children=[
-            dcc.Location(id="url", refresh=False),
-            navbar.content,
-            dbc.Container(id="page-content", className="mt-4"),
-            html.Hr(),
-            footer.content,
-        ]
-    )
+    dashboard.layout = html.Div(children=[
+        dcc.Location(id="url", refresh=False),
+        navbar.content,
+        dbc.Container(id="page-content", className="mt-4"),
+        html.Hr(),
+        footer.content,
+    ])
 
     with server.app_context():
-        dashboard.title = "app__warframe_ds"
+        dashboard.title = "WarFrame Market Predictions"
         register_callbacks(dashboard)
 
     return dashboard
