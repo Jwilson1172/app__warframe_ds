@@ -1,0 +1,24 @@
+language: python
+python:
+- '3.6'
+- '3.7'
+- '3.8'
+- pypy
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - pytest
+# if the unit testing passes then go ahead and deploy using heroku's API
+# heroku deployment on branch deploy
+# before_deploy: # for adding commands before the build process
+deploy:
+  provider: heroku
+  api_key:
+    secure: V7xkZJOzu9iaX6Hfw2iGWg4RuvstGYI4RQ77db6SDIfNpI6GNh4Nl3tabQJEyDHNlW7WEV6lsUP1uPdrAoyZWdjmbBWJsbMFvrmMHJEDs/gMqHYpjRn4P6zyzYBUtXOnD7LGRRNFdoT0Cjb7plIvB+SALJMxW5pQMkFh1KTuWMYK/8uPngRmSeh8HzXQvSwn0XvRI5dQXrQ9YIQrcMCrXoUVTl7m/DOLRafDk1ZYZ8A9LhDK5w2SPT2/U2o8Xx+PCftA+sFOyUJt/zY2BYWRjvvamt5NsobXExhBUV/kmXYAu/ta+oWtYbCOGGeqHg7+Tu+85W+5MzkMBwM/H/fSDYUvBoWWjC64egDCAiyED4WwSDwWlmRMT1+vIjpDP93HIqZOUkvkOLf7v3kmW+VIV/NQ0f2gFu2NhfFAYDxZot2VECogx3J9WmxQdxT/sGT3fdsYRrRAGmZdfzyobRK0glli87qWQPVESeJx/TJnJaIm0A0+KxYwf4HuP4Th/xoMh8zfRC3DTqOHdKjyTAFrdQ1dKrpkAlf/gjrrC1lH0PzOzgp3rFF5QkBm1cQ1jaoSExbzgcP2pZ+zo3F3Q5WLF0HzU++XeNooz0wrUPIZ5kvVE8Ik2OF2yiRxw65gBq7vItR2p27qLv3nwEwaB+bT1eXusLxheX6va+78WgJqV9E=
+  app: "warframe-market-predictions"
+  strategy: git
+  on: deploy
+  # run: # commands to run during the build process
+# after_deploy: # for adding commands after deploying like cleanups ect

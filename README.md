@@ -1,5 +1,6 @@
-[![Build
-Status](https://travis-ci.com/Jwilson1172/warframe_ds.svg?branch=master)](https://travis-ci.com/Jwilson1172/warframe_ds)
+![Build
+Status](https://travis-ci.com/Jwilson1172/app__warframe_ds.svg?branch=master)
+
 <a href="https://heroku.com/deploy" style="display: block"><img src="https://www.herokucdn.com/deploy/button.svg"
         title="Deploy" alt="Deploy"></a>
 
