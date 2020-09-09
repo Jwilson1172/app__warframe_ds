@@ -41,4 +41,4 @@ def register_callbacks(app):
         elif pathname == "/process":
             return process.layout
         else:
-            return dcc.Markdown("## Page not found")
+            return dcc.Markdown("## 404 Error: Page not found")

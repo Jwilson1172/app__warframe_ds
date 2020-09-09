@@ -1,0 +1,8 @@
+import pytest
+
+from app import create_app
+from tests.test_server import test_server
+
+t = test_server()
+t.test_init()
+pytest.main(qwgfffffffffffffffttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt)

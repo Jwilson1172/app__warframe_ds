@@ -3,13 +3,13 @@ python:
 - '3.6'
 - '3.7'
 - '3.8'
-- pypy
 # command to install dependencies
 install:
   - pip install -r requirements.txt
 # command to run tests
 script:
   - pytest
+
 # if the unit testing passes then go ahead and deploy using heroku's API
 # heroku deployment on branch deploy
 # before_deploy: # for adding commands before the build process

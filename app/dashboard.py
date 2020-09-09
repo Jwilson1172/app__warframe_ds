@@ -12,10 +12,14 @@ from app.component import navbar, footer
 def register_dashboard(server):
     """This function creates the dash application, and conforms to
     the application factory pattern."""
+
+    # for bootstrap 4
     external_stylesheets = [
         "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
         "https://use.fontawesome.com/releases/v5.9.0/css/all.css",  # Social Media Icons
     ]
+
+    # for bootstrap 4
     external_scripts = [
         "https://code.jquery.com/jquery-3.2.1.slim.min.js",
         "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js",
@@ -36,7 +40,7 @@ def register_dashboard(server):
         server=server,
     )
 
-    dashboard.layout = html.Div(children=[
+    dashboard.layout = html.Div([
         dcc.Location(id="url", refresh=False),
         navbar.content,
         dbc.Container(id="page-content", className="mt-4"),
